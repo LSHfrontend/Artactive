@@ -1,0 +1,272 @@
+.about-us {
+  position: relative;
+
+  margin-bottom: 63px;
+  padding-top: 33px;
+  padding-bottom: 89px;
+
+  &::before {
+    .bg-lines;
+  }
+}
+
+.services {
+  margin-bottom: 60px;
+}
+
+.reviews {
+  position: relative;
+
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-bottom: 55px;
+
+  overflow: hidden;
+
+  &::before {
+    .bg-lines;
+  }
+}
+
+.questions {
+  position: relative;
+
+  padding-bottom: 84px;
+
+  &::before {
+    .bg-lines;
+  }
+}
+
+.contacts {
+  box-sizing: border-box;
+
+  min-height: 532px;
+  padding-top: 67px;
+
+  background-color: @white;
+  background-image: url("../img/map-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 320px 532px;
+
+  & .container {
+    width: 290px;
+    padding: 38px 38px 56px;
+
+    background-color: @white;
+    border-radius: 10px;
+    box-shadow: 0 23px 32px @shadow-color-dark;
+  }
+}
+
+.modal-request {
+  display: none;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
+
+  width: 360px;
+  margin: 0 auto;
+  padding: 35px 60px 55px;
+
+  color: @white;
+
+  background-color: @bg-color-request;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+
+  & .consult-request__input {
+    margin-bottom: 23px;
+
+    color: @white;
+
+    &::placeholder {
+      color: @white;
+    }
+
+    &:last-of-type {
+      margin-bottom: 34px;
+    }
+  }
+
+  & .consult-request__button {
+    width: 100%;
+  }
+}
+
+.modal-request__close {
+  top: 3px;
+  right: 3px;
+
+  &::before,
+  &::after {
+    background-color: @white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    margin-bottom: 74px;
+    padding-top: 47px;
+    padding-bottom: 174px;
+
+    &::before {
+      .bg-lines-tablet;
+    }
+
+    &::after {
+      .lines;
+    }
+  }
+
+  .services {
+    margin-bottom: 73px;
+  }
+
+  .reviews {
+    padding-top: 69px;
+    padding-bottom: 76px;
+
+    &::before {
+      .bg-lines-tablet;
+    }
+  }
+
+  .questions {
+    padding-bottom: 103px;
+
+    &::before {
+      .bg-lines-tablet;
+    }
+
+    &::after {
+      .lines;
+
+      right: 157px;
+      bottom: -68px;
+      left: auto;
+
+      margin-left: 0;
+    }
+  }
+
+  .contacts {
+    min-height: 470px;
+    padding-top: 61px;
+
+    background-image: url("../img/map-tablet.jpg");
+    background-size: 780px 470px;
+
+    & .container {
+      position: relative;
+      left: -167px;
+
+      width: 386px;
+      padding: 62px 42px 79px 57px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    margin-bottom: 95px;
+    padding-top: 101px;
+    padding-bottom: 152px;
+
+    &::before {
+      .bg-lines-desktop;
+    }
+
+    &::after {
+      bottom: -67px;
+
+      margin-left: 7px;
+    }
+  }
+
+  .services {
+    margin-bottom: 121px;
+  }
+
+  .reviews {
+    padding-top: 139px;
+    padding-bottom: 119px;
+
+    &::before {
+      .bg-lines-desktop;
+    }
+  }
+
+  .questions {
+    padding-bottom: 170px;
+
+    &::before {
+      .bg-lines-desktop;
+    }
+
+    &::after {
+      right: auto;
+      left: 50%;
+
+      margin-left: 7px;
+    }
+  }
+
+  .contacts {
+    min-height: 653px;
+    padding-top: 121px;
+
+    background-image: url("../img/map-desktop.jpg");
+    background-size: 1920px 653px;
+
+    & .container {
+      left: 50%;
+
+      width: 458px;
+      margin-left: -570px;
+      padding: 80px 95px 117px 88px;
+    }
+  }
+}
+
+.webp .contacts {
+  background-image: url("../img/map-mobile.webp");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/map-tablet.webp");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/map-desktop.webp");
+  }
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .contacts {
+    background-image: url("../img/map@2x-mobile.jpg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/map@2x-tablet.jpg");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/map@2x-desktop.jpg");
+    }
+  }
+
+  .webp .contacts {
+    background-image: url("../img/map@2x-mobile.webp");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/map@2x-tablet.webp");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/map@2x-desktop.webp");
+    }
+  }
+}

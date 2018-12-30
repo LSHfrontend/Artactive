@@ -1,0 +1,167 @@
+.reviews__heading {
+  .heading;
+
+  margin: 0 auto;
+}
+
+.reviews__slider {
+  & .slider__list {
+    display: flex;
+  }
+
+  & .slider__item {
+    box-sizing: border-box;
+
+    top: 0;
+    left: 0;
+
+    width: 290px;
+    min-height: 583px;
+    padding: 60px 20px 0;
+    border-radius: 10px;
+
+    background-color: @white;
+
+    &--active {
+      position: relative;
+    }
+
+    &:nth-child(2) {
+      left: 180%;
+      z-index: -1;
+    }
+
+    &:last-child {
+      left: -180%;
+      z-index: -2;
+    }
+  }
+
+  & .slider__picture {
+    margin-bottom: 43px;
+    margin-left: 45px;
+  }
+
+  & .slider__image {
+    width: 136px;
+    height: 136px;
+
+    border-radius: 50%;
+  }
+}
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.reviews__author {
+  display: block;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+  font-style: normal;
+  color: @title-color;
+}
+
+.reviews__link {
+  font-weight: 600;
+  line-height: 3rem;
+  color: @link-color;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__heading {
+    margin-bottom: 60px;
+  }
+
+  .reviews__slider {
+    position: relative;
+
+    &::before,
+    &::after {
+      .pseudo;
+
+      top: 0;
+      z-index: 2;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      right: 110%;
+
+      background-image: linear-gradient(to right, white 75%, transparent);
+    }
+
+    &::after {
+      left: 110%;
+
+      background-image: linear-gradient(to left, white 75%, transparent);
+    }
+
+    & .slider__item {
+      width: 720px;
+      min-height: 306px;
+      padding: 52px 62px 0 250px;
+
+      &:nth-child(2) {
+        left: 110%;
+      }
+
+      &:last-child {
+        left: -110%;
+      }
+    }
+
+    & .slider__picture {
+      position: absolute;
+      top: 59px;
+      left: 63px;
+
+      margin: 0;
+    }
+  }
+
+  .reviews__text {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__heading {
+    margin-bottom: 79px;
+  }
+
+  .reviews__slider {
+    width: 844px;
+    padding: 0;
+
+    &::before {
+      right: 103%;
+    }
+
+    &::after {
+      left: 103%;
+    }
+
+    & .slider__item {
+      width: 844px;
+      padding: 53px 80px 0 256px;
+
+      &:nth-child(2) {
+        left: 103%;
+      }
+
+      &:last-child {
+        left: -103%;
+      }
+    }
+
+    & .slider__picture {
+      left: 75px;
+    }
+  }
+}

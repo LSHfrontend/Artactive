@@ -1,0 +1,789 @@
+.services__heading {
+  .heading;
+
+  margin: 0 auto 39px;
+}
+
+.services__main-list {
+  .list-style;
+}
+
+.services__main-item {
+  &:first-child {
+    margin-bottom: 73px;
+
+    & .services__title {
+      &::before {
+        content: "1";
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    position: relative;
+
+    padding-top: 68px;
+    padding-bottom: 251px;
+
+    &::before {
+      .bg-lines;
+    }
+
+    & .container::before {
+      .pseudo;
+
+      right: 0;
+      bottom: 56px;
+      z-index: -1;
+
+      width: 281px;
+      height: 355px;
+
+      background-image: url("../img/sofa-mobile.jpg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 281px 355px;
+    }
+
+    & .services__title {
+      margin-bottom: 36px;
+
+      &::before {
+        content: "2";
+      }
+    }
+  }
+
+  &:last-child {
+    padding-top: 65px;
+
+    & .services__title {
+      margin-bottom: 48px;
+
+      &::before {
+        content: "3";
+      }
+    }
+
+    & .services__text {
+      margin-bottom: 21px;
+
+      & span:first-child {
+        display: inline-block;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &:not(:first-child) .services__title::before {
+    top: -23px;
+    left: 28px;
+  }
+}
+
+.services__title {
+  .title;
+
+  position: relative;
+
+  margin-bottom: 43px;
+
+  &::before {
+    .number;
+  }
+}
+
+.services__list {
+  .list-style;
+
+  margin-bottom: 43px;
+}
+
+.services__item {
+  position: relative;
+
+  padding-left: 2px;
+
+  &::first-letter {
+    padding-left: 7px;
+  }
+
+  &::before {
+    .pseudo;
+
+    top: 11.5px;
+    left: 2px;
+
+    border: 1.5px solid @black;
+    border-radius: 50%;
+  }
+}
+
+.services__slider {
+  margin-bottom: 43px;
+
+  & .slider__item {
+    margin-bottom: 27px;
+
+    &--active {
+      & .slider__picture {
+        position: relative;
+
+        animation: slider 0.5s ease-in-out 0s 1;
+      }
+
+      & .slider__image {
+        box-shadow: 0 20px 46px @shadow-color-slider;
+      }
+
+      .services__caption {
+        display: block;
+      }
+    }
+
+    &:nth-child(2) {
+      z-index: -1;
+      top: -5px;
+      left: 2.0689%;
+      right: 2.0689%;
+
+      opacity: 0.5;
+    }
+
+    &:last-child {
+      z-index: -2;
+      top: -10px;
+      left: 4.1379%;
+      right: 4.1379%;
+
+      opacity: 0.3;
+    }
+  }
+
+  & .slider__picture {
+    margin-bottom: 10px;
+
+    &::before {
+      display: block;
+
+      position: absolute;
+      left: 50px;
+      bottom: 50px;
+
+      width: 100px;
+      height: 100px;
+
+      font-size: 100px;
+      font-weight: 900;
+      line-height: 100px;
+      text-align: center;
+      color: @bg-color-button;
+    }
+
+    &--1::before {
+      content: "1";
+    }
+
+    &--2::before {
+      content: "2";
+    }
+
+    &--3::before {
+      content: "3";
+    }
+  }
+
+  & .slider__image {
+    width: 290px;
+    height: 187px;
+
+    border-radius: 10px;
+  }
+}
+
+.services__caption {
+  display: none;
+
+  font-size: 1.3rem;
+}
+
+.services__request {
+  box-sizing: border-box;
+
+  padding: 29px 25px 30px;
+
+  color: @white;
+
+  background-color: @bg-color-request;
+  border-radius: 10px;
+  box-shadow: 0 23px 70px 5px @shadow-color;
+
+  & .services__button {
+    width: 242px;
+  }
+}
+
+.services__lead {
+  margin: 0;
+  margin-bottom: 30px;
+
+  & span {
+    display: block;
+
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    font-style: italic;
+  }
+
+  & b {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+
+.services__text {
+  margin: 0;
+  margin-bottom: 44px;
+}
+
+.services__form {
+  padding-top: 289px;
+
+  color: @title-color;
+
+  &::before {
+    .pseudo;
+
+    left: 50%;
+    top: 0;
+    z-index: -1;
+
+    width: 304px;
+    height: 255px;
+    margin-left: -150px;
+
+    background-image: url("../img/documents-mobile.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 304px 255px;
+  }
+
+  & .consult-request__input {
+    margin-bottom: 12px;
+    color: @black;
+
+    &::placeholder {
+      color: @placeholder-color;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @black;
+    }
+
+    &:last-of-type {
+      margin-bottom: 31px;
+    }
+  }
+
+  & .consult-request__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .services__heading {
+    margin-bottom: 57px;
+  }
+
+  .services__main-item {
+    &:first-child {
+      position: relative;
+
+      margin-bottom: 0;
+
+      & .services__title {
+        width: 580px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 41px;
+      padding-top: 136px;
+      padding-bottom: 400px;
+
+      &::before {
+        .bg-lines-tablet;
+      }
+
+      &::after {
+        .lines;
+
+        bottom: -65px;
+
+        margin-left: 3px;
+      }
+
+      & .container::before {
+        bottom: 60px;
+
+        width: 536px;
+        height: 640px;
+
+        background-image: url("../img/sofa-tablet.jpg");
+        background-size: 536px 640px;
+      }
+
+      & .services__title {
+        width: 415px;
+        margin-bottom: 60px;
+      }
+
+      & .services__text {
+        width: 550px;
+      }
+
+      & .services__button {
+        width: 241px;
+      }
+    }
+
+    &:last-child {
+      overflow: hidden;
+
+      & .services__title {
+        width: 440px;
+        margin-bottom: 47px;
+      }
+
+      & .services__text {
+        width: 640px;
+        margin-bottom: 22px;
+      }
+    }
+
+    &:not(:first-child) .services__title::before {
+      top: -37px;
+      left: 23px;
+    }
+  }
+
+  .services__title {
+    .title--big;
+
+    margin-bottom: 60px;
+
+    &::before {
+      top: -35px;
+    }
+  }
+
+  .services__list {
+    margin-bottom: 66px;
+  }
+
+  .services__slider {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+
+    & .slider__item {
+      margin-bottom: 0;
+    }
+
+    & .slider__picture {
+      margin-bottom: 38px;
+    }
+
+    & .slider__image {
+      width: 720px;
+      height: 460px;
+    }
+
+    & .slider__control {
+      margin-top: -18px;
+    }
+  }
+
+  .services__caption {
+    text-align: right;
+  }
+
+  .services__request {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 32px 32px 36px 38px;
+
+    & .services__button {
+      width: 249px;
+    }
+  }
+
+  .services__lead {
+    display: inline-block;
+
+    margin-bottom: 0;
+
+    & span {
+      display: inline-block;
+
+      width: 124px;
+    }
+
+    & b {
+      display: inline-block;
+    }
+  }
+
+  .services__form {
+    padding: 46px 0 45px;
+
+    &::before {
+      left: auto;
+      right: -119px;
+      bottom: -15px;
+
+      width: 453px;
+      height: 381px;
+
+      background-image: url("../img/documents-tablet.jpg");
+      background-size: 453px 381px;
+    }
+
+    &::after {
+      .pseudo;
+
+      left: -143px;
+      bottom: -14px;
+      z-index: -2;
+
+      width: 502px;
+      height: 340px;
+
+      background-image: url("../img/paper-plane-tablet.jpg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 502px 340px;
+    }
+
+    & .consult-request__input {
+      margin-bottom: 13px;
+
+      &:last-of-type {
+        margin-bottom: 29px;
+      }
+    }
+  }
+
+  .services__form-wrapper {
+    width: 240px;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  .services__slider {
+    position: relative;
+
+    &::before {
+      .bg-lines;
+      .bg-lines-tablet;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .services__heading {
+    margin-bottom: 78px;
+  }
+
+  .services__main-item {
+    &:first-child {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 185px;
+
+      & .services__title {
+        width: 415px;
+      }
+    }
+
+    &:nth-child(2) {
+      max-width: @desktop-width;
+      margin: 0 auto;
+      padding: 124px 0 568px;
+
+      &::before {
+        .bg-lines-desktop;
+      }
+
+      &::after {
+        bottom: -66px;
+
+        margin-left: 7px;
+      }
+
+      & .container {
+        box-sizing: content-box;
+        position: relative;
+
+        width: 555px;
+        margin-right: 0;
+        margin-left: auto;
+
+        &::before {
+          top: 4px;
+          right: 150px;
+          bottom: auto;
+
+          width: 1276px;
+          height: 813px;
+
+          background-image: url("../img/sofa-desktop.jpg");
+          background-size: 1276px 813px;
+        }
+      }
+
+      & .services__title {
+        margin-bottom: 50px;
+      }
+
+      & .services__text {
+        margin-bottom: 55px;
+      }
+    }
+
+    &:last-child {
+      padding-top: 136px;
+
+      & .services__title {
+        margin-bottom: 48px;
+      }
+
+      & .services__text {
+        width: 565px;
+        margin-bottom: 108px;
+      }
+    }
+
+    &:not(:first-child) .services__title::before {
+      left: -83px;
+    }
+  }
+
+  .services__title {
+    margin-bottom: 47px;
+  }
+
+  .services__list {
+    margin-bottom: 74px;
+  }
+
+  .services__slider {
+    position: absolute;
+    top: -3px;
+    right: 16px;
+    order: 1;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    & .slider__picture {
+      margin-bottom: 37px;
+    }
+
+    & .slider__image {
+      width: 570px;
+      height: 460px;
+    }
+
+    & .slider__control {
+      margin-top: -17px;
+    }
+  }
+
+  .services__caption {
+    margin-right: 135px;
+  }
+
+  .services__request {
+    width: 475px;
+
+    & .services__button {
+      width: 171px;
+      margin-right: 6px;
+    }
+  }
+
+  .services__lead {
+    & span {
+      display: block;
+    }
+  }
+
+  .services__form {
+    padding: 0;
+
+    &::before {
+      top: -543px;
+      right: -99px;
+      bottom: auto;
+
+      width: 648px;
+      height: 544px;
+
+      background-image: url("../img/documents-desktop.jpg");
+      background-size: 648px 544px;
+    }
+
+    &::after {
+      left: auto;
+      bottom: 0;
+      right: -136px;
+
+      width: 503px;
+      height: 340px;
+
+      background-image: url("../img/paper-plane-desktop.jpg");
+      background-size: 503px 340px;
+    }
+
+    & .consult-request__lead {
+      width: 100%;
+    }
+
+    & .consult-request__button {
+      width: 192px;
+    }
+
+    & .consult-request__input {
+      width: 241px;
+    }
+  }
+
+  .services__form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 760px;
+  }
+}
+
+.webp {
+  & .services__main-item:nth-child(2) .container::before {
+    background-image: url("../img/sofa-mobile.webp");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/sofa-tablet.webp");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/sofa-desktop.webp");
+    }
+  }
+
+  & .services__form {
+    &::before {
+      background-image: url("../img/documents-mobile.webp");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/documents-tablet.webp");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/documents-desktop.webp");
+      }
+    }
+
+    &::after {
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/paper-plane-tablet.webp");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/paper-plane-desktop.webp");
+      }
+    }
+  }
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .services__main-item:nth-child(2) .container::before {
+    background-image: url("../img/sofa@2x-mobile.jpg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/sofa@2x-tablet.jpg");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/sofa@2x-desktop.jpg");
+    }
+  }
+
+  .services__form {
+    &::before {
+      background-image: url("../img/documents@2x-mobile.jpg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/documents@2x-tablet.jpg");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/documents@2x-desktop.jpg");
+      }
+    }
+
+    &::after {
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/paper-plane@2x-tablet.jpg");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/paper-plane@2x-desktop.jpg");
+      }
+    }
+  }
+
+  .webp {
+    & .services__main-item:nth-child(2) .container::before {
+      background-image: url("../img/sofa@2x-mobile.webp");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/sofa@2x-tablet.webp");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/sofa@2x-desktop.webp");
+      }
+    }
+
+    & .services__form {
+      &::before {
+        background-image: url("../img/documents@2x-mobile.webp");
+
+        @media (min-width: @tablet-width) {
+          background-image: url("../img/documents@2x-tablet.webp");
+        }
+
+        @media (min-width: @desktop-width) {
+          background-image: url("../img/documents@2x-desktop.webp");
+        }
+      }
+
+      &::after {
+        @media (min-width: @tablet-width) {
+          background-image: url("../img/paper-plane@2x-tablet.webp");
+        }
+
+        @media (min-width: @desktop-width) {
+          background-image: url("../img/paper-plane@2x-desktop.webp");
+        }
+      }
+    }
+  }
+}

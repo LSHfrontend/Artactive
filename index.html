@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+  <html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Вёрстка тестового макета 'Artactive'">
+    <script src="js/modernizr-webp.js"></script>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Artactive</title>
+  </head>
+
+  <body>
+    <aside class="switch" aria-labelledby="switch__heading">
+      <h2 class="switch__heading visually-hidden" id="switch__heading">Быстрый переход к разделам сайта</h2>
+
+      <ul class="switch__list">
+        <li class="switch__item">
+          <input class="switch__button visually-hidden" type="radio" name="switchButton" id="switchButton__header">
+          <label class="switch__label" for="switchButton__header" title="Перейти в начало страницы"></label>
+        </li>
+
+        <li class="switch__item">
+          <input class="switch__button visually-hidden" type="radio" name="switchButton" id="switchButton__about-us">
+          <label class="switch__label" for="switchButton__about-us" title="Перейти в раздел 'О нас'"></label>
+        </li>
+
+        <div class="switch__item switch__indicator-wrapper">
+          <button class="switch__indicator" type="button" tabindex="-1" title="Перейти в раздел 'Услуги'"></button>
+        </div>
+
+        <li class="switch__item switch__item--list">
+          <ul class="switch__sublist">
+            <li class="switch__subitem">
+              <input class="switch__subbutton visually-hidden" type="radio" name="switchButton" id="switchButton__services1">
+              <label class="switch__sublabel" for="switchButton__services1" title="Перейти в первый раздел услуг"></label>
+            </li>
+
+            <li class="switch__subitem">
+              <input class="switch__subbutton visually-hidden" type="radio" name="switchButton" id="switchButton__services2">
+              <label class="switch__sublabel" for="switchButton__services2" title="Перейти во второй раздел услуг"></label>
+            </li>
+
+            <li class="switch__subitem">
+              <input class="switch__subbutton visually-hidden" type="radio" name="switchButton" id="switchButton__services3">
+              <label class="switch__sublabel" for="switchButton__services3" title="Перейти в третий раздел услуг"></label>
+            </li>
+          </ul>
+        </li>
+
+        <li class="switch__item">
+          <input class="switch__button visually-hidden" type="radio" name="switchButton" id="switchButton__reviews">
+          <label class="switch__label" for="switchButton__reviews" title="Перейти в раздел 'Отзывы'"></label>
+        </li>
+
+        <li class="switch__item">
+          <input class="switch__button visually-hidden" type="radio" name="switchButton" id="switchButton__questions">
+          <label class="switch__label" for="switchButton__questions" title="Перейти в раздел 'Частые вопросы'"></label>
+        </li>
+
+        <li class="switch__item">
+          <input class="switch__button visually-hidden" type="radio" name="switchButton" id="switchButton__contacts">
+          <label class="switch__label" for="switchButton__contacts" title="Перейти в раздел 'Контакты'"></label>
+        </li>
+      </ul>
+    </aside>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__wrapper">
+          <a href="/" class="page-header__logo">Artactive</a>
+
+          <nav class="page-header__navigation">
+            <ul class="site-list">
+              <li class="site-list__item">
+                <a href="#about-us" class="site-list__link">О нас</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#services" class="site-list__link">Услуги</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#reviews" class="site-list__link">Отзывы</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#questions" class="site-list__link">FAQ</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#contacts" class="site-list__link">Контакты</a>
+              </li>
+            </ul>
+
+            <div class="page-header__request">
+              <a href="tel:+79201488131" class="page-header__tel">+7 (920) 148 81 31</a>
+              <button class="page-header__button button" type="button" data-modal>Заказать звонок</button>
+            </div>
+
+            <button class="page-header__close  button--close" type="button" aria-label="Закрыть меню"></button>
+          </nav>
+
+          <button class="page-header__open" type="button" aria-label="Открыть меню"></button>
+        </div>
+
+        <div class="page-header__start-home start-home">
+          <h1 class="start-home__heading">Размер<br>не имеет<br>значения!</h1>
+          <p class="start-home__lead">Оперативная полиграфия<br>и широкоформатная печать<br>любого размера</p>
+
+          <div class="start-home__wrapper">
+            <button class="start-home__button button" type="button" data-modal>Заказать печать</button>
+            <span class="start-home__desc">с доставкой по Ярославлю<br>и Ярославской области</span>
+          </div>
+
+          <button class="start-home__down" type="button" aria-label="Вниз"></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="about-us container" id="about-us" aria-labelledby="about-us__heading">
+        <div class="about-us__wrapper">
+          <h2 class="about-us__heading" id="about-us__heading">1. О нас</h2>
+
+          <h3 class="about-us__title"><span>Полный спектр услуг — </span>от дизайна до печати</h3>
+
+          <p class="about-us__text">
+            <span>К вашим услугам мы предлагаем полный спектр работ, начиная от печати открыток, чертежей, баннеров, растяжек, создания буклетов и эксклюзивных календарей, и заканчивая постпечатной обработкой.</span>
+            <span>В копицентре не просто предоставляют услуги печати: мы ориентируемся на комплексное обслуживание. Все услуги, будь то оперативная цифровая печать открыток или разработка серии календарей, Вы можете получить в одном месте, воспользовавшись сопутствующими услугами копицентра.</span>
+            <span>При этом работа выполняется в максимально сжатые сроки и не в ущерб качеству конечного результата, которое неизменно остается на высоте.</span>
+          </p>
+        </div>
+
+        <ul class="about-us__list">
+          <li class="about-us__item">
+            <h4 class="about-us__caption">Приём и детальное обсуждение заказа</h4>
+          </li>
+          <li class="about-us__item">
+            <h4 class="about-us__caption">Создание и согласование дизайн-макета</h4>
+          </li>
+          <li class="about-us__item">
+            <h4 class="about-us__caption">Печать и постпечатная обработка изделий любых размеров</h4>
+          </li>
+          <li class="about-us__item">
+            <h4 class="about-us__caption">Доставка готовой продукции</h4>
+          </li>
+        </ul>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="services__heading">
+        <h2 class="services__heading container" id="services__heading">2. Услуги</h2>
+
+        <ul class="services__main-list">
+          <li class="services__main-item container" aria-labelledby="services__title-1">
+            <h3 class="services__title" id="services__title-1">Широкоформатная печать баннеров, растяжек, афиш</h3>
+
+            <ul class="services__list">
+              <li class="services__item">подготовка макетов к печати, дизайн рекламных баннеров</li>
+              <li class="services__item">срочная печать за 3 часа</li>
+              <li class="services__item">проварка карманов и сварка нескольких изображений</li>
+              <li class="services__item">пробивка люверсов и вварка монтажных тросов</li>
+              <li class="services__item">изготовление цветопробы</li>
+              <li class="services__item">доставка баннеров</li>
+            </ul>
+
+            <div class="services__slider slider">
+              <div class="slider__list">
+                <figure class="slider__item slider__item--active">
+                  <picture class="slider__picture slider__picture--1">
+                    <source type="image/webp" media="(min-width: 1170px)" srcset="img/slide-1-desktop.webp 1x, img/slide-1@2x-desktop.webp 2x">
+                    <source type="image/webp" media="(min-width: 750px)" srcset="img/slide-1-tablet.webp 1x, img/slide-1@2x-tablet.webp 2x">
+                    <source type="image/webp" srcset="img/slide-1-mobile.webp 1x, img/slide-1@2x-mobile.webp 2x">
+
+                    <source media="(min-width: 1170px)" srcset="img/slide-1-desktop.jpg 1x, img/slide-1@2x-desktop.jpg 2x">
+                    <source media="(min-width: 750px)" srcset="img/slide-1-tablet.jpg 1x, img/slide-1@2x-tablet.jpg 2x">
+                    <img class="slider__image" src="img/slide-1-mobile.jpg" srcset="img/slide-1@2x-mobile.jpg 2x" alt="Баннер с пивом марки 'Миллер'">
+                  </picture>
+
+                  <figcaption class="services__caption">Растяжка на ул. Ленина</figcaption>
+                </figure>
+
+                <figure class="slider__item">
+                  <picture class="slider__picture slider__picture--2">
+                    <source type="image/webp" media="(min-width: 1170px)" srcset="img/slide-1-desktop.webp 1x, img/slide-1@2x-desktop.webp 2x">
+                    <source type="image/webp" media="(min-width: 750px)" srcset="img/slide-1-tablet.webp 1x, img/slide-1@2x-tablet.webp 2x">
+                    <source type="image/webp" srcset="img/slide-1-mobile.webp 1x, img/slide-1@2x-mobile.webp 2x">
+
+                    <source media="(min-width: 1170px)" srcset="img/slide-1-desktop.jpg 1x, img/slide-1@2x-desktop.jpg 2x">
+                    <source media="(min-width: 750px)" srcset="img/slide-1-tablet.jpg 1x, img/slide-1@2x-tablet.jpg 2x">
+                    <img class="slider__image" src="img/slide-1-mobile.jpg" srcset="img/slide-1@2x-mobile.jpg 2x" alt="Баннер с пивом марки 'Миллер'">
+                  </picture>
+
+                  <figcaption class="services__caption">Растяжка на ул. Каруселина</figcaption>
+                </figure>
+
+                <figure class="slider__item">
+                  <picture class="slider__picture slider__picture--3">
+                    <source type="image/webp" media="(min-width: 1170px)" srcset="img/slide-1-desktop.webp 1x, img/slide-1@2x-desktop.webp 2x">
+                    <source type="image/webp" media="(min-width: 750px)" srcset="img/slide-1-tablet.webp 1x, img/slide-1@2x-tablet.webp 2x">
+                    <source type="image/webp" srcset="img/slide-1-mobile.webp 1x, img/slide-1@2x-mobile.webp 2x">
+
+                    <source media="(min-width: 1170px)" srcset="img/slide-1-desktop.jpg 1x, img/slide-1@2x-desktop.jpg 2x">
+                    <source media="(min-width: 750px)" srcset="img/slide-1-tablet.jpg 1x, img/slide-1@2x-tablet.jpg 2x">
+                    <img class="slider__image" src="img/slide-1-mobile.jpg" srcset="img/slide-1@2x-mobile.jpg 2x" alt="Баннер с пивом марки 'Миллер'">
+                  </picture>
+
+                  <figcaption class="services__caption">Растяжка на ул. Карла Маркса</figcaption>
+                </figure>
+              </div>
+
+              <div class="slider__control">
+                <button class="slider__button" id="services__prev" type="button" aria-label="Предыдущий слайдер"></button>
+                <button class="slider__button" id="services__next" type="button" aria-label="Следующий слайдер"></button>
+              </div>
+            </div>
+
+            <div class="services__request">
+              <p class="services__lead">
+                <span>Есть вопросы?</span>
+                <b>Закажите консультацию</b>
+              </p>
+
+              <button class="services__button button" type="button" data-modal>Заказать</button>
+            </div>
+          </li>
+
+          <li class="services__main-item" aria-labelledby="services__title-2">
+            <div class="container">
+              <h3 class="services__title" id="services__title-2">Широкоформатная печать для вашего интерьера</h3>
+
+              <p class="services__text">Печатаем широкоформатные фотографии на глянцевой и матовой фотобумаге разной плотности, на глянцевом и матовом холсте или на самоклеющейся пленке. также можем предложить обработку и редактирование ваших фотографий силами наших дизайнеров: композиции, фотоколлаж, ретушь, различные эффекты</p>
+              <button class="services__button button" type="button" data-modal>Оставить заявку</button>
+            </div>
+          </li>
+
+          <li class="services__main-item" aria-labelledby="services__title-3">
+            <div class="container">
+              <h3 class="services__title">Оперативная полиграфия — от визитки до баннера</h3>
+
+              <p class="services__text" id="services__title-3">
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+                <span>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error.</span>
+              </p>
+
+              <form action="#" method="POST" class="services__form consult-request">
+                <div class="services__form-wrapper">
+                  <p class="consult-request__lead">
+                    <span>Есть вопросы?</span>
+                    <b>Оставьте заявку на консультацию</b>
+                  </p>
+
+                  <input class="consult-request__input" type="text" name="consult-request-name" id="services-input-name" aria-label="Имя" placeholder="Имя">
+                  <input class="consult-request__input" type="tel" name="consult-request-tel" id="services-input-tel" aria-label="Телефон" placeholder="Телефон">
+
+                  <button class="consult-request__button button" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="reviews" id="reviews" aria-labelledby="reviews__heading">
+          <h2 class="reviews__heading container" id="reviews__heading">3. Отзывы</h2>
+
+          <div class="reviews__slider slider container">
+            <div class="slider__list">
+              <blockquote class="slider__item slider__item--active">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/reviews-1-mobile.webp 1x, img/reviews-1@2x-mobile.webp">
+
+                  <img class="slider__image" src="img/reviews-1-mobile.jpg" srcset="img/reviews-1@2x-mobile.jpg 2x" alt="Фото Александра Максимова">
+                </picture>
+
+                <p class="reviews__text">Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!</p>
+                <cite class="reviews__author">Александров Максим, 24 года</cite>
+                <a href="#" class="reviews__link">vk.com/mr.sharp</a>
+              </blockquote>
+
+              <blockquote class="slider__item">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/reviews-2-mobile.webp 1x, img/reviews-2@2x-mobile.webp">
+
+                  <img class="slider__image" src="img/reviews-2-mobile.jpg" srcset="img/reviews-2@2x-mobile.jpg 2x" alt="Фото Александра Максимова">
+                </picture>
+
+                <p class="reviews__text">Обратилась в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничала, не знала, с чего начать. Осталась довольна, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!</p>
+                <cite class="reviews__author">Александрова Максим, 24 года</cite>
+                <a href="#" class="reviews__link">vk.com/mrs.sharp</a>
+              </blockquote>
+
+              <blockquote class="slider__item">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/reviews-1-mobile.webp 1x, img/reviews-1@2x-mobile.webp">
+
+                  <img class="slider__image" src="img/reviews-1-mobile.jpg" srcset="img/reviews-1@2x-mobile.jpg 2x" alt="Фото Александра Максимова">
+                </picture>
+
+                <p class="reviews__text">Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!</p>
+                <cite class="reviews__author">Александров Максим, 24 года</cite>
+                <a href="#" class="reviews__link">vk.com/mr.sharp</a>
+              </blockquote>
+            </div>
+
+            <div class="slider__control">
+              <button class="slider__button" id="reviews__prev" type="button" aria-label="Предыдущий слайдер"></button>
+              <button class="slider__button" id="reviews__next" type="button" aria-label="Следующий слайдер"></button>
+            </div>
+          </div>
+      </section>
+
+      <section class="questions container" id="questions" aria-labelledby="questions__heading">
+        <h2 class="questions__heading" id="questions__heading">4. Частые вопросы (FAQ)</h2>
+
+        <ul class="questions__list">
+          <li class="questions__item">
+            <h4 class="questions__caption">Что такое макет?</h4>
+            <p class="questions__text">Макет — это будущее печатное изделие в электронном формате. Верстают (собирают) макет в специализированном программном обеспечении.</p>
+          </li>
+
+          <li class="questions__item">
+            <h4 class="questions__caption">У меня есть готовый макет</h4>
+            <p class="questions__text">Вы можете привезти его к нам в офис на любом удобном для вас носителе (диск, флешка). В присутствии вас мы обработаем ваш макет и отправим его в производство.</p>
+          </li>
+
+          <li class="questions__item">
+            <h4 class="questions__caption">У меня нет макета</h4>
+            <p class="questions__text">В нашем штате работают професиональные дизайнеры, которые с ваших слов или в вашем присутствии сверстают макет, который после утверждения также будет отправлен в печать.</p>
+          </li>
+
+          <li class="questions__item">
+            <h4 class="questions__caption">Сколько времени занимает печать?</h4>
+            <p class="questions__text">В том случае если изображение готово к печати, изготовление занимает около 3 часов. Также время изготовления зависит от нашей загруженности.</p>
+          </li>
+
+          <li class="questions__item">
+            <h4 class="questions__caption">Я не могу приехать к вам в офис</h4>
+            <p class="questions__text">Отправьте нам изображение по электронной почте, укажите свой телефон. Мы свяжемся с вами для уточнения деталей. Готовое изделие мы доставим вам курьером.</p>
+          </li>
+
+          <li class="questions__item">
+            <h4 class="questions__caption">Вызов курьера бесплатный?</h4>
+            <p class="questions__text">В зависимости от соимости заказа, курьер может доставить вам продукцию бесплатно (при соимости от 600 руб.) или от 150 руб. в пределах Ярославля и до 500 руб. в пределах Ярославской области.</p>
+          </li>
+        </ul>
+
+        <form action="#" method="POST" class="questions__form consult-request">
+          <p class="consult-request__lead">
+            <span>Остались вопросы?</span>
+            <b>Оставьте заявку на консультацию</b>
+          </p>
+
+          <div class="questions__form-wrapper">
+            <input class="consult-request__input" type="text" name="consult-request-name" id="questions-input-name" aria-label="Имя" placeholder="Имя">
+            <input class="consult-request__input" type="tel" name="consult-request-tel" id="questions-input-tel" aria-label="Телефон" placeholder="Телефон">
+
+            <button class="consult-request__button button" type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="contacts" id="contacts" aria-labelledby="contacts__heading">
+        <div class="container">
+          <h2 class="contacts__heading" id="contacts__heading">5. Контакты</h2>
+
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <span class="contacts__address">г. Ярославль, проспект Октября, 88</span>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:art-aktiv.76@mail.ru" class="contacts__email">art-aktiv.76@mail.ru</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+79201488131" class="contacts__tel">+7 (920) 148 81 31</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <a href="#" class="page-footer__policy">Политика конфиденциальноси</a>
+        <b class="page-footer__copyright">ООО «АртАктив», 2017 ©</b>
+        <b class="page-footer__design">Designed by Sergey Strogiy</b>
+      </div>
+    </footer>
+
+    <section class="modal-request" aria-label="Заказать звонок">
+      <form action="#" method="POST" class="consult-request">
+        <p class="consult-request__lead">
+          <span>Есть вопросы?</span>
+          <b>Закажите звонок</b>
+        </p>
+
+        <input class="consult-request__input" type="text" name="consult-request-name" id="modal-request-input-name" aria-label="Имя" placeholder="Имя">
+        <input class="consult-request__input" type="tel" name="consult-request-tel" id="modal-request-input-tel" aria-label="Телефон" placeholder="Телефон">
+
+        <button class="consult-request__button button" type="submit">Отправить</button>
+      </form>
+
+      <button class="modal-request__close button--close" type="button" aria-label="Закрыть модальное окно"></button>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

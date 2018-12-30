@@ -1,0 +1,383 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Medium"), local("OpenSans-Medium"), url("../fonts/OpenSans.woff2") format("woff2"), url("../fonts/OpenSans.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("../fonts/OpenSansItalic.woff2") format("woff2"), url("../fonts/OpenSansItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("../fonts/OpenSansSemiBold.woff2") format("woff2"), url("../fonts/OpenSansSemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/OpenSansBold.woff2") format("woff2"), url("../fonts/OpenSansBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("../fonts/OpenSansExtraBold.woff2") format("woff2"), url("../fonts/OpenSansExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("Muller Medium"), local("Muller-Medium"), url("../fonts/MullerMedium.woff2") format("woff2"), url("../fonts/MullerMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("Muller Bold"), local("Muller-Bold"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("Muller ExtraBold"), local("Muller-ExtraBold"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("Muller Heavy"), local("Muller-Heavy"), url("../fonts/MullerHeavy.woff2") format("woff2"), url("../fonts/MullerHeavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+
+    width: 100%;
+  }
+
+  30% {
+    left: 2%;
+
+    width: 96%;
+  }
+
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: @text-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: @white;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.button {
+  display: inline-block;
+
+  width: 290px;
+  padding: 14px 0 16px;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: @white;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: @bg-color-button;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.container {
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: @mobile-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.shading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__list {
+  position: relative;
+}
+
+.slider__item {
+  position: absolute;
+
+  margin: 0;
+
+  &--active {
+    position: static;
+  }
+}
+
+.slider__picture {
+  display: block;
+}
+
+.slider__image {
+  vertical-align: top;
+}
+
+.slider__control {
+  display: flex;
+  justify-content: space-between;
+
+  width: 230px;
+  margin: 0 auto;
+}
+
+.slider__button {
+  position: relative;
+
+  width: 90px;
+  height: 14px;
+  padding: 0;
+
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &::before {
+    .pseudo;
+
+    top: 6px;
+    left: 0;
+
+    width: 80px;
+    height: 2px;
+
+    background-color: @bg-color-request;
+  }
+
+  &::after {
+    .pseudo;
+
+    top: 2px;
+    right: 2px;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: transparent;
+    box-shadow: inset 2px -2px @bg-color-request;
+    transform: rotate(-135deg);
+  }
+
+  &:first-child {
+    &::before {
+      left: auto;
+      right: 0;
+    }
+
+    &::after {
+      right: auto;
+      left: 2px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.consult-request {
+  position: relative;
+}
+
+.consult-request__lead {
+  width: 180px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  line-height: 2.8rem;
+
+  & span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 1.6rem;
+    font-style: italic;
+  }
+
+  & b {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.consult-request__input {
+  position: relative;
+  box-sizing: border-box;
+
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 0 10px 13px;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid @border-color;
+
+  &::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+
+    opacity: 1;
+  }
+}
+
+.button--close {
+  box-sizing: content-box;
+
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    .pseudo;
+
+    top: 17.5px;
+    left: 8px;
+
+    width: 20px;
+    height: 1px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 247px;
+
+    font-size: 1.6rem;
+  }
+
+  .container {
+    max-width: @tablet-width;
+  }
+
+  .slider__control {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    max-width: @desktop-width;
+  }
+
+  .consult-request__lead {
+    margin-bottom: 24px;
+  }
+
+  .consult-request__input {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

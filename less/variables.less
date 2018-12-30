@@ -1,0 +1,119 @@
+// Файл с миксинами
+
+@mobile-width: 320px;
+@tablet-width: 750px;
+@desktop-width: 1170px;
+
+@black: #000000;
+@white: #ffffff;
+@text-color: #5e606a;
+@heading-color: #7f38bd;
+@title-color: #383d52;
+@placeholder-color: #868995;
+@nav-color: #333333;
+@link-color: darken(#3594dd, 10%);
+@border-color: #cccccc;
+@cross-color: #b4b4b4;
+@label-color: #e3e2e3;
+@lines-color: #f2f2f2;
+@shadow-color: rgba(81, 8, 86, 0.33);
+@shadow-color-slider: rgba(80, 9, 79, 0.35);
+@shadow-color-dark: rgba(0, 0, 0, 0.16);
+@bg-color-header: #a044ff;
+@bg-color-footer: #65269d;
+@bg-color-button: darken(#fb0275, 4%);
+@bg-color-request: #883eca;
+
+.list-style() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title() {
+  margin: 0;
+
+  font-family: "Muller", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.9rem;
+  color: @title-color;
+}
+
+.title--big() {
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+}
+
+.heading() {
+  margin: 0;
+
+  font-family: "Muller", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  color: @heading-color;
+}
+
+.pseudo() {
+  content: "";
+
+  display: block;
+  position: absolute;
+}
+
+.lines() {
+  .pseudo;
+
+  left: 50%;
+  bottom: -60px;
+
+  width: 2px;
+  height: 83px;
+
+  background-color: @bg-color-request;
+  box-shadow: -9px -47px @bg-color-request;
+}
+
+.bg-lines() {
+  .pseudo;
+
+  top: 0;
+  left: 50%;
+  z-index: -10;
+
+  width: 1px;
+  height: 100%;
+  margin-left: -2px;
+
+  background-color: @lines-color;
+  box-shadow: 107px 0 @lines-color,
+    -107px 0 @lines-color;
+}
+
+.bg-lines-tablet() {
+  box-shadow: 373px 0 @lines-color,
+    188px 0 @lines-color,
+    -186px 0 @lines-color,
+    -368px 0 @lines-color;
+}
+
+.bg-lines-desktop() {
+  box-shadow: 584px 0 @lines-color,
+    292px 0 @lines-color,
+    -292px 0 @lines-color,
+    -584px 0 @lines-color;
+}
+
+.number() {
+  position: absolute;
+  top: -18px;
+  left: 23px;
+  z-index: -1;
+
+  font-family: "Muller", sans-serif;
+  font-size: 20rem;
+  font-weight: 900;
+  line-height: 14.7rem;
+  color: @white;
+}

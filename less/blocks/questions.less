@@ -1,0 +1,255 @@
+.questions__heading {
+  .heading;
+
+  margin-bottom: 30px;
+}
+
+.questions__list {
+  .list-style;
+
+  margin-bottom: 53px;
+}
+
+.questions__item {
+  &:not(:last-child) {
+    margin-bottom: 29px;
+  }
+
+  &:nth-last-child(2) {
+    margin-bottom: 34px;
+  }
+}
+
+.questions__caption {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: @title-color;
+}
+
+.questions__text {
+  margin: 0;
+}
+
+.questions__form {
+  padding: 36px 25px 56px;
+
+  color: @white;
+
+  background-color: @bg-color-request;
+  border-radius: 10px;
+  box-shadow: 0 23px 70px 5px @shadow-color;
+
+  &::before {
+    .pseudo;
+
+    top: 0;
+    right: 0;
+
+    width: 94px;
+    height: 102px;
+
+    background-image: url("../img/circles-mobile.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 94px 102px;
+  }
+
+  & .consult-request__input {
+    margin-bottom: 15px;
+
+    color: @white;
+
+    &::placeholder {
+      color: @white;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @white;
+    }
+
+    &:last-of-type {
+      margin-bottom: 37px;
+    }
+  }
+
+  & .consult-request__button {
+    z-index: 2;
+
+    width: 244px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .questions__heading {
+    margin-bottom: 48px;
+  }
+
+  .questions__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 26px;
+    }
+  }
+
+  .questions__form {
+    padding: 36px 32px 50px 35px;
+
+    &::before {
+      width: 242px;
+      height: 219px;
+
+      background-image: url("../img/circles-tablet.png");
+      background-size: 242px 219px;
+      border-bottom-right-radius: 10px;
+    }
+
+    & .consult-request__lead {
+      width: 100%;
+      margin-bottom: 18px;
+    }
+
+    & .questions__form-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    & .consult-request__input {
+      width: 181px;
+      margin-top: 9px;
+      margin-bottom: 0;
+
+      &:last-of-type {
+        width: 171px;
+        margin-top: 9px;
+        margin-bottom: 0;
+        margin-left: -11px;
+      }
+    }
+
+    & .consult-request__button {
+      width: 192px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .questions__heading {
+    margin-bottom: 59px;
+  }
+
+  .questions__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 64px;
+  }
+
+  .questions__item {
+    width: 555px;
+
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(-3n + 4) {
+      order: 1;
+    }
+
+    &:nth-child(-3n + 5) {
+      order: 2;
+
+      margin-bottom: 38px;
+    }
+
+    &:nth-child(-3n + 6) {
+      order: 3;
+
+      margin-bottom: 0;
+    }
+  }
+
+  .questions__form {
+    padding: 36px 67px 48px 311px;
+
+    &::before {
+      right: auto;
+      left: 30px;
+
+      width: 241px;
+
+      background-image: url("../img/circles-desktop.png");
+      background-size: 241px 219px;
+    }
+
+    &::after {
+      .pseudo;
+
+      right: 0;
+      bottom: 0;
+
+      width: 661px;
+      height: 219px;
+
+      background-image: url("../img/bg-form-desktop.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 661px 219px;
+    }
+
+    & .consult-request__lead {
+      z-index: 2;
+
+      margin-bottom: 21px;
+    }
+
+    & .consult-request__input {
+      width: 241px;
+      z-index: 2;
+
+      &:last-of-type {
+        width: 241px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.webp .questions__form::after {
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-form-desktop.webp");
+  }
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .questions__form::before {
+    background-image: url("../img/circles@2x-mobile.png");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/circles@2x-tablet.png");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/circles@2x-desktop.png");
+    }
+  }
+
+  .webp .questions__form::after {
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/bg-form@2x-desktop.webp");
+    }
+  }
+}
