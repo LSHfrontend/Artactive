@@ -53,7 +53,9 @@
     modalBtn[i].addEventListener("click", showModal, false);
   };
 
-  function showModal() {
+  function showModal(evt) {
+    evt.preventDefault();
+
     let modalRequest = document.getElementsByClassName("modal-request")[0];
     modalRequest.style.display = "block";
     modalRequest.querySelector(".consult-request")[0].focus();
@@ -70,7 +72,7 @@
   };
 
   let downBtn = document.getElementsByClassName("start-home__down")[0];
-  downBtn.addEventListener("click", function() {window.scrollBy(0, document.body.scrollHeight - window.innerHeight - window.pageYOffset);}, false)
+  downBtn.addEventListener("click", function() {window.scrollBy(0, document.body.scrollHeight - window.innerHeight - window.pageYOffset)}, false)
 
   let switchPanel = document.getElementsByClassName("switch")[0];
   switchPanel.addEventListener("change", scrollSwitch, true);
@@ -123,9 +125,7 @@
     if (prevSect && prevSect === evt) return;
     prevSect = evt;
 
-    if (evt.target) {
-      if (evt.target.nodeName !== "INPUT") return;
-
+    if (evt.target && evt.target.nodeName === "INPUT") {
       document.removeEventListener("scroll", getCoords, false);
 
       switchEl = evt.target.id.substring(14);

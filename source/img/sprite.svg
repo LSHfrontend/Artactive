@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol id="icon-label" viewBox="0 0 11 17" fill="#883eca">
+    <path d="M3.84 15.06C1.6 11.35.16 7.94 0 5.94-.24 2.4 1.53.26 5 0c5-.36 7.33 3.68 5.19 9-1.12 2.75-4.19 8-4.74 8-.23 0-.94-.87-1.61-1.94zm2.85-7.45a2.46 2.46 0 0 0-.27-4.28 2.39 2.39 0 0 0-3.15 3 2.31 2.31 0 0 0 3.42 1.28z"/>
+  </symbol>
+
+  <symbol id="icon-envelope" viewBox="0 0 13 10" fill="#883eca">
+    <path d="M.42.45a1.45 1.45 0 0 0-.42 1v7.08a1.45 1.45 0 0 0 .42 1A1.51 1.51 0 0 0 1.5 10h10A1.49 1.49 0 0 0 13 8.53V1.47A1.49 1.49 0 0 0 11.5 0h-10A1.56 1.56 0 0 0 .42.45zM2 2a.49.49 0 0 1 .66 0L6.5 5.26 10.32 2A.48.48 0 0 1 11 2a.47.47 0 0 1 0 .63L8.71 4.9 11 7.38a.45.45 0 0 1 0 .65.47.47 0 0 1-.63 0L7.91 5.71l-.65.64a1.14 1.14 0 0 1-1.52 0l-.65-.64L2.69 8A.49.49 0 0 1 2 8a.46.46 0 0 1 0-.63l2.29-2.46L2 2.66A.48.48 0 0 1 2 2z"/>
+  </symbol>
+
+  <symbol id="icon-phone" viewBox="0 0 14 14" fill="#883eca">
+    <path d="M4.86 11.14c3.22 3.22 5.69 4 8.6 1.12.45-.48.88-1.06.27-1.67l-2.35-1.81a1 1 0 0 0-1.4.28 2.26 2.26 0 0 1-3.61 0L5 7.66a2.25 2.25 0 0 1 0-3.61.93.93 0 0 0 .27-1.39L3.45.3c-.61-.61-1.2-.18-1.67.28C-1.11 3.5-.3 6 2.92 9.19z"/>
+  </symbol>
+
+  <view id="icon-label-view" viewBox="0 0 11 17"></view>
+  <view id="icon-envelope-view" viewBox="0 18 13 10"></view>
+  <view id="icon-phone-view" viewBox="0 29 14 14"></view>
+
+  <use id="label" xlink:href="#icon-label" width="11" height="17" x="0" y="0"></use>
+  <use id="envelope" xlink:href="#icon-envelope" width="13" height="10" x="0" y="18"></use>
+  <use id="phone" xlink:href="#icon-phone" width="14" height="14" x="0" y="29"></use>
+</svg>

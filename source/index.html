@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Artactive</title>
     <meta name="description" content="Вёрстка тестового макета 'Artactive'">
     <script src="js/modernizr-webp.js"></script>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Artactive</title>
+    <style>
+      .to-main-page{position:fixed;top:80%;left:-35px;z-index:9999;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:left .3s ease-out 0s;transition:left .3s ease-out 0s;background-color:#181818;border-radius:15px;opacity:.85}.to-main-page__logo{display:block;width:50px;height:50px;padding:10px;outline:0;border-radius:15px}.to-main-page__logo:focus .to-main-page__logo-group--border,.to-main-page__logo:hover .to-main-page__logo-group--border{stroke-width:2}.to-main-page__logo:focus .to-main-page__logo-group--inner,.to-main-page__logo:hover .to-main-page__logo-group--inner{fill:#31c12a}.to-main-page__logo-image{vertical-align:top}.to-main-page__logo-group{-webkit-transition:fill .3s ease-out 0s,stroke-width 1s ease-out 0s;transition:fill .3s ease-out 0s,stroke-width 1s ease-out 0s}.to-main-page__logo-group--border{stroke:#31c12a;stroke-width:1.5}.to-main-page__logo-group--inner{fill:#fff}@media (min-width:768px){.to-main-page{left:-60px}.to-main-page__logo,.to-main-page__logo-image{width:100px;height:100px}@-webkit-keyframes logoBorder{to{opacity:.2}}@keyframes logoBorder{to{opacity:.2}}@-webkit-keyframes logoInner{to{stroke-dashoffset:0}}@keyframes logoInner{to{stroke-dashoffset:0}}.to-main-page__logo:focus .to-main-page__logo-group--border,.to-main-page__logo:hover .to-main-page__logo-group--border{stroke-width:3;stroke-dasharray:50;stroke-dashoffset:300;-webkit-animation:logoBorder 2s ease-in 0s infinite alternate,logoInner 2s linear 0s infinite;animation:logoBorder 2s ease-in 0s infinite alternate,logoInner 2s linear 0s infinite}.to-main-page__logo:focus .to-main-page__logo-group--inner,.to-main-page__logo:hover .to-main-page__logo-group--inner{fill:none;stroke:#31c12a;stroke-width:1.5;stroke-dasharray:220;stroke-dashoffset:220;-webkit-animation:logoInner 2s ease-in-out 0s infinite alternate;animation:logoInner 2s ease-in-out 0s infinite alternate}.MSBrowser .to-main-page__logo:focus .to-main-page__logo-group,.MSBrowser .to-main-page__logo:hover .to-main-page__logo-group{fill:#31c12a;-webkit-animation:none;animation:none}.MSBrowser .to-main-page__logo:focus .to-main-page__logo-group--border,.MSBrowser .to-main-page__logo:hover .to-main-page__logo-group--border{stroke-dasharray:0;stroke-dashoffset:0}}@media (min-width:1170px){.to-main-page:hover{left:0}}
+    </style>
   </head>
 
   <body>
@@ -26,9 +29,9 @@
           <label class="switch__label" for="switchButton__about-us" title="Перейти в раздел 'О нас'"></label>
         </li>
 
-        <div class="switch__item switch__indicator-wrapper">
+        <li class="switch__item switch__indicator-wrapper">
           <button class="switch__indicator" type="button" tabindex="-1" title="Перейти в раздел 'Услуги'"></button>
-        </div>
+        </li>
 
         <li class="switch__item switch__item--list">
           <ul class="switch__sublist">
@@ -69,7 +72,7 @@
     <header class="page-header">
       <div class="container">
         <div class="page-header__wrapper">
-          <a href="/" class="page-header__logo">Artactive</a>
+          <a href="/artactive" class="page-header__logo">Artactive</a>
 
           <nav class="page-header__navigation">
             <ul class="site-list">
@@ -92,10 +95,10 @@
 
             <div class="page-header__request">
               <a href="tel:+79201488131" class="page-header__tel">+7 (920) 148 81 31</a>
-              <button class="page-header__button button" type="button" data-modal>Заказать звонок</button>
+              <a href="call-request.html" class="page-header__button button" data-modal>Заказать звонок</a>
             </div>
 
-            <button class="page-header__close  button--close" type="button" aria-label="Закрыть меню"></button>
+            <button class="page-header__close button--close" type="button" aria-label="Закрыть меню"></button>
           </nav>
 
           <button class="page-header__open" type="button" aria-label="Открыть меню"></button>
@@ -106,7 +109,7 @@
           <p class="start-home__lead">Оперативная полиграфия<br>и широкоформатная печать<br>любого размера</p>
 
           <div class="start-home__wrapper">
-            <button class="start-home__button button" type="button" data-modal>Заказать печать</button>
+            <a href="call-request.html" class="start-home__button button" data-modal>Заказать печать</a>
             <span class="start-home__desc">с доставкой по Ярославлю<br>и Ярославской области</span>
           </div>
 
@@ -218,7 +221,7 @@
                 <b>Закажите консультацию</b>
               </p>
 
-              <button class="services__button button" type="button" data-modal>Заказать</button>
+              <a href="call-request.html" class="services__button button" data-modal>Заказать</a>
             </div>
           </li>
 
@@ -227,7 +230,7 @@
               <h3 class="services__title" id="services__title-2">Широкоформатная печать для вашего интерьера</h3>
 
               <p class="services__text">Печатаем широкоформатные фотографии на глянцевой и матовой фотобумаге разной плотности, на глянцевом и матовом холсте или на самоклеющейся пленке. также можем предложить обработку и редактирование ваших фотографий силами наших дизайнеров: композиции, фотоколлаж, ретушь, различные эффекты</p>
-              <button class="services__button button" type="button" data-modal>Оставить заявку</button>
+              <a href="call-request.html" class="services__button button" data-modal>Оставить заявку</a>
             </div>
           </li>
 
@@ -265,9 +268,9 @@
             <div class="slider__list">
               <blockquote class="slider__item slider__item--active">
                 <picture class="slider__picture">
-                  <source type="image/webp" srcset="img/reviews-1-mobile.webp 1x, img/reviews-1@2x-mobile.webp">
+                  <source type="image/webp" srcset="img/reviews-1-mobile.webp 1x, img/reviews-1@2x-mobile.webp 2x">
 
-                  <img class="slider__image" src="img/reviews-1-mobile.jpg" srcset="img/reviews-1@2x-mobile.jpg 2x" alt="Фото Александра Максимова">
+                  <img class="slider__image" src="img/reviews-1-mobile.jpg" srcset="img/reviews-1@2x-mobile.jpg 2x" alt="Фото Александрова Максима">
                 </picture>
 
                 <p class="reviews__text">Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!</p>
@@ -277,9 +280,9 @@
 
               <blockquote class="slider__item">
                 <picture class="slider__picture">
-                  <source type="image/webp" srcset="img/reviews-2-mobile.webp 1x, img/reviews-2@2x-mobile.webp">
+                  <source type="image/webp" srcset="img/reviews-2-mobile.webp 1x, img/reviews-2@2x-mobile.webp 2x">
 
-                  <img class="slider__image" src="img/reviews-2-mobile.jpg" srcset="img/reviews-2@2x-mobile.jpg 2x" alt="Фото Александра Максимова">
+                  <img class="slider__image" src="img/reviews-2-mobile.jpg" srcset="img/reviews-2@2x-mobile.jpg 2x" alt="Фото Александровой Максим">
                 </picture>
 
                 <p class="reviews__text">Обратилась в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничала, не знала, с чего начать. Осталась довольна, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!</p>
@@ -289,9 +292,9 @@
 
               <blockquote class="slider__item">
                 <picture class="slider__picture">
-                  <source type="image/webp" srcset="img/reviews-1-mobile.webp 1x, img/reviews-1@2x-mobile.webp">
+                  <source type="image/webp" srcset="img/reviews-1-mobile.webp 1x, img/reviews-1@2x-mobile.webp 2x">
 
-                  <img class="slider__image" src="img/reviews-1-mobile.jpg" srcset="img/reviews-1@2x-mobile.jpg 2x" alt="Фото Александра Максимова">
+                  <img class="slider__image" src="img/reviews-1-mobile.jpg" srcset="img/reviews-1@2x-mobile.jpg 2x" alt="Фото Александрова Максима">
                 </picture>
 
                 <p class="reviews__text">Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!</p>
@@ -338,7 +341,7 @@
 
           <li class="questions__item">
             <h4 class="questions__caption">Вызов курьера бесплатный?</h4>
-            <p class="questions__text">В зависимости от соимости заказа, курьер может доставить вам продукцию бесплатно (при соимости от 600 руб.) или от 150 руб. в пределах Ярославля и до 500 руб. в пределах Ярославской области.</p>
+            <p class="questions__text">В зависимости от стоимости заказа, курьер может доставить вам продукцию бесплатно (при стоимости от 600 руб.) или от 150 руб. в пределах Ярославля и до 500 руб. в пределах Ярославской области.</p>
           </li>
         </ul>
 
@@ -398,6 +401,26 @@
       </form>
 
       <button class="modal-request__close button--close" type="button" aria-label="Закрыть модальное окно"></button>
+    </section>
+
+    <section class="to-main-page" id="to-main-page" aria-labelledby="to-main-page__heading">
+      <h2 class="visually-hidden" id="to-main-page__heading">На главную страницу</h2>
+
+      <a href="/" class="to-main-page__logo"  aria-label="Перейти на главную страницу">
+        <svg class="to-main-page__logo-image" viewBox="0 0 125 125" width="50px" height="50px" aria-hidden="true">
+          <g class="to-main-page__logo-group to-main-page__logo-group--border" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M100.2 2.5L122 39.3l-59.8 81.4L2.9 39.3 24 2.5h76.2m1.5-2.5H22.6L0 39.5 62.2 125 125 39.5 101.7 0z"/>
+          </g>
+
+          <g class="to-main-page__logo-group to-main-page__logo-group--inner">
+            <path d="M59.6 90.5c.1-.3 1.1-3.7 2.3-7.7l2.1-7.2h.9c.5 0 .8.1.8.2s-1 3.5-2.2 7.7L61.2 91h-.9c-.6 0-.7-.1-.7-.5zm-7.9-3.1c-4.2-2.2-4.6-2.4-4.6-3.2s.4-1 4.9-3.3l4.9-2.5v.9c0 .8-.2 1-3.9 2.9l-3.9 2 3.8 2c3.5 1.8 3.8 2 3.8 2.8 0 .5-.1.8-.2.8-.2 0-2.3-1.1-4.8-2.4zM68.5 89c0-.8.3-1 3.9-2.8l4-2-4-2c-3.7-1.9-3.9-2-3.9-2.9v-.9l4.9 2.5c4.6 2.3 4.9 2.5 4.9 3.3s-.4 1-4.8 3.2c-2.6 1.3-4.8 2.4-4.9 2.4 0 0-.1-.3-.1-.8zm-23-23.3c-.9-.9-1-1.1-1-2.5 0-2.7 1.3-4.1 3.8-4.1 1 0 1.3.2 2.2 1.1 1 1 1.1 1.1.9 2.9-.1 1.7-.2 2-1.1 2.8-.8.7-1.1.9-2.4.9-1.3-.1-1.6-.3-2.4-1.1zm3.6-.6c.8-1.9 0-5.1-1.1-5.1-1.3 0-1.9 2.9-1 4.8.6 1.3 1.7 1.4 2.1.3zM64 66.3c-.2-.2-.4-1.3-.4-3.2 0-2.6 0-2.9-.6-2.9-.3 0-.6-.2-.6-.3 0-.2.3-.4.6-.5.4-.1.6-.4.6-.8 0-.6 1.1-1.6 1.6-1.6.1 0 .2.5.2 1.1 0 1.1.1 1.1.9 1.1.6 0 .9.2.9.5s-.3.5-.9.5h-1v2.3c0 2.4.2 2.8 1.2 2.8.9 0 .9.6 0 1-.8.4-2.2.4-2.5 0zm5.8 0c-1-.7-1.3-2-1.2-3.6.2-1.2.3-1.6 1.2-2.5.8-.8 1.2-1 2.2-1 1.4 0 2.6 1 2.6 2.3 0 1.1-.4 1.2-2.6 1.2-1.8 0-2 .1-1.2 1.4.5 1.1 1.6 1.3 2.7.9 1.1-.6 1.4.1.4 1-1.2.8-3.1 1-4.1.3zm2.9-4.7c.3-.5-.4-1.5-1-1.5s-1.1.8-1.1 1.4c0 .3 1.8.3 2.1.1zm14.4 4.6c-.9-.8-1.2-1.6-1.2-3 0-2.3 1.6-4 3.9-4 1 0 1.1 0 1.1-1.1 0-.9-.2-1.2-.6-1.5-.8-.5-.8-1.1 0-1.1.3 0 1-.1 1.4-.2l.9-.2v5.1c0 4.9 0 5.1.6 5.3 1 .3.5.9-.9 1.1-1 .2-1.3.2-1.4-.2-.2-.3-.3-.3-.6 0-.7.4-2.5.3-3.2-.2zm3.1-1c.5-.3.6-.7.6-2.4 0-2.3-.4-3-1.5-2.7-1.9.5-1.7 4.9.3 5.4 0 0 .3-.1.6-.3zm-58.7 1c0-.2.3-.4.6-.5.5-.2.6-.5.6-2.8 0-2.4 0-2.6-.6-2.6-.8 0-.8-.6 0-.8.4-.1.6-.5.8-1.3.3-1.6 1.7-3.2 3.2-3.2 1.2 0 1.8.6 1.3 1.4-.4.8-.7.8-1.1.2-1-1.1-1.7-.3-1.7 1.8 0 .9.1 1 1.1 1 1.3 0 1.1.7-.2.8l-1 .1.1 2.5c.1 2.3.2 2.6.8 2.8 1.1.5.7.8-1.5.8-1.4-.1-2.4-.1-2.4-.2zm5.7 0c0-.2.3-.4.6-.5.5-.2.6-.5.6-2.5 0-1.9-.1-2.4-.5-2.7-.7-.5-.3-.9 1.1-1.1 1-.2 1.1-.2 1.1.5v.7l.7-.7c1.1-1 2-.8 2 .4 0 .8-.1.9-1.1.9-1.4 0-1.7.5-1.6 2.7.1 1.3.2 1.7.8 1.9 1.1.5.7.8-1.5.8-1.1-.3-2.2-.3-2.2-.4zm15.7 0c0-.2.3-.4.6-.5.5-.2.6-.5.6-2.5 0-1.9-.1-2.4-.5-2.7-.7-.5-.3-.9 1.1-1.1.9-.2 1.1-.1 1.1.3 0 .5.1.5.8 0 .4-.3 1.1-.5 1.7-.5 1.5 0 1.9.8 1.9 3.6 0 2.1.1 2.4.6 2.8 1 .6.7.8-1.3.8-1.7 0-2.4-.3-1.4-.7.7-.2.6-4.3 0-4.9-.5-.6-.5-.6-1.4-.1-.7.3-.8.5-.8 2.4 0 1.5.1 2.2.5 2.5.8.7.5.9-1.4.9-1.3-.2-2.1-.2-2.1-.3zm23.1 0c0-.2.3-.4.6-.5.5-.2.6-.5.6-2.5 0-1.9-.1-2.4-.5-2.7-.7-.5-.3-.9 1.1-1.1.9-.2 1.1-.1 1.1.3 0 .5.1.5.8 0 .4-.3 1.1-.5 1.7-.5 1.5 0 1.9.8 1.9 3.6 0 2.1.1 2.4.6 2.8 1 .6.7.8-1.3.8-1.7 0-2.4-.3-1.4-.7.7-.2.6-4.3 0-4.9-.5-.6-.5-.6-1.4-.1-.7.3-.8.5-.8 2.4 0 1.5.1 2.2.5 2.5.8.7.5.9-1.4.9-1.2-.2-2.1-.2-2.1-.3zm-23.8-16c-1-.3-1.9-.8-2.1-1-.4-.5-1.3-6.3-1.1-7 .1-.3.5-.5.9-.5.6 0 .8.3 1.1 1.4.8 2.1 2.2 4.1 3.7 4.9 1.1.6 1.6.7 3.3.6 2.2-.1 3.1-.6 4.2-2.3.8-1.1.9-3.8.2-5.2-.7-1.3-2.8-3-5.9-4.7-5-2.7-6.6-4.8-6.6-8.5 0-3.4 1.3-5.6 4.4-7.2 1.6-.9 6.1-1.1 8.7-.4l1.8.5.4 3.3c.2 1.7.3 3.3.3 3.3-.1 0-.5.2-.9.3-.8.2-.8.1-1.2-1.5-.7-2.2-2.4-3.9-4-4.2-3.3-.6-5.9 1.6-5.9 4.7 0 2.7 1.6 4.4 6.1 6.8 5.6 2.9 7.2 4.8 7.2 8.6 0 3.6-1.4 5.9-4.6 7.6-1.7.9-2.2 1-5 1.1-2.6-.1-3.7-.2-5-.6zm19.8-.6c.1-.9.2-1 1.1-1.1 1.6-.1 2.6-.7 2.9-1.4.1-.4.2-5.8.2-12V23.8l-.8-.7c-.5-.4-1.1-.7-1.6-.7-1.2 0-1.7-.3-1.7-1.1v-.8H84v.8c0 .5-.2.8-.8.9-1.7.4-2 .5-2.4.7-.6.4-.9 2.8-.9 7.1v3.4h16l-.2-4.8c-.1-2.6-.3-5-.5-5.4s-.8-.7-1.4-.8c-1.9-.3-2.1-.5-2.1-1.1v-.7h11.9v.7c0 .8-.5 1.1-1.7 1.1-.5 0-1.1.3-1.6.7l-.8.7V47l.7.7c.5.4 1.1.7 2 .8 1.3.2 1.3.2 1.4 1.1l.1 1H91.1v-.9c0-1 .4-1.1 1.9-1.1.6 0 1.2-.3 1.7-.7l.8-.7.2-5.6.2-5.6H79.7l.2 5.6c.2 6.5.3 6.8 2.8 7.1 1.3.2 1.3.2 1.4 1.1l.1 1H71.9c0-.3.1-1.2.1-1.2zm-50.5-.2c.1-.8.2-.9 1.4-1 .9-.1 1.6-.4 2-.8.7-.7.7-.7.7-11.9 0-6.1-.1-11.5-.2-12-.2-.8-1.1-1.2-2.9-1.5-1-.2-1.1-.3-1.1-.9v-.8h12.2v.8c0 .6-.2.8-1.1.9-2.1.4-2.6.6-2.9 1.6-.4 1.1-.5 21.3-.1 22.5.1.4.5 1 .9 1.2 1.5 1.1 7 1.1 8.7-.2.8-.5 2.4-3 2.9-4.5.2-.5 1.7-.2 1.7.5 0 .2-.4 1.8-.8 3.6l-.8 3.2H21.4c0 .2.1-.7.1-.7z"/>
+          </g>
+        </svg>
+      </a>
+
+      <script>
+        !function(){"use strict";let e=!!window.MSInputMethodContext&&!!document.documentMode,t=/Edge/.test(window.navigator.userAgent);(e||t)&&document.documentElement.classList.add("MSBrowser");let n,i=window.innerWidth>=1170;function o(){let e=document.getElementById("to-main-page"),t=e.querySelector(".to-main-page__logo");n=!1,t.addEventListener("click",function(t){n||(t.preventDefault(),e.style.left=0,n=!0,setTimeout(function(){e.removeAttribute("style"),n=!1},3e3))},!1)}i||o(),window.addEventListener("resize",function(){!i&&window.innerWidth>=1170?(i=!0,n=!0):i&&window.innerWidth<1170&&(n=!1,i=!1,o())},!1)}();
+      </script>
     </section>
 
     <script src="js/main.js"></script>
